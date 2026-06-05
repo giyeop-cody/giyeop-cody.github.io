@@ -1,0 +1,12 @@
+<svg width="480" height="480" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">프로필 일러스트</title>
+  <desc id="desc">원형 배경과 추상적인 얼굴 형태로 구성된 프로필 이미지</desc>
+  <rect width="480" height="480" rx="48" fill="#101828"/>
+  <circle cx="240" cy="170" r="110" fill="#7C3AED" opacity="0.35"/>
+  <circle cx="240" cy="170" r="84" fill="#E0E7FF"/>
+  <path d="M240 272C163.49 272 101 334.49 101 411V432H379V411C379 334.49 316.51 272 240 272Z" fill="#A78BFA"/>
+  <circle cx="208" cy="160" r="10" fill="#101828"/>
+  <circle cx="272" cy="160" r="10" fill="#101828"/>
+  <path d="M208 208C221.333 221.333 258.667 221.333 272 208" stroke="#101828" stroke-width="12" stroke-linecap="round"/>
+  <path d="M168 88C190.667 58.6667 234.8 43.2 288 56C340 68.5 353.333 117.333 352 144C333.6 126 307 116 272 114C214.4 110.8 179.333 127.333 168 136V88Z" fill="#7C3AED"/>
+</svg>
