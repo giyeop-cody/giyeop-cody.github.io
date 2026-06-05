@@ -189,7 +189,7 @@ node validate-portfolio.mjs
 - GitHub 링크: `https://github.com/giyeop-cody`
 - LinkedIn 링크: 사용 안 함
 - 이메일: `cody.giyeop@gmail.com`
-- GitHub 저장소 URL: `https://github.com/giyeop-cody/B4-1`
+- GitHub 저장소 URL: `https://github.com/giyeop-cody/giyeop-cody.github.io`
 - GitHub Pages 배포 URL: `https://giyeop-cody.github.io`
 
 ---
