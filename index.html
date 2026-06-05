@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Portfolio</title>
+    <meta
+      name="description"
+      content="순수 HTML, CSS, JavaScript로 구현한 반응형 포트폴리오 웹사이트"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+
+    <header class="site-header" id="top">
+      <nav class="nav container" aria-label="주요 메뉴">
+        <a class="logo" href="#hero" aria-label="홈으로 이동">Kim Giyeop</a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="메뉴 열기"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="#hero">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-label="다크 모드 전환">
+          <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+          <span class="theme-toggle__text">Theme</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section reveal" id="hero">
+        <div class="container hero__content">
+          <p class="eyebrow">웹 기초 완성 미션</p>
+          <h1>안녕하세요, 저는 <span class="accent">Kim Giyeop</span>입니다.</h1>
+          <p class="hero__typing" aria-live="polite">
+            <span id="typing-text">Vanilla JavaScript로 사용자 경험을 만드는 중입니다.</span>
+          </p>
+          <p class="hero__description">
+            HTML, CSS, JavaScript만으로 반응형 포트폴리오를 만들며 이벤트, 상태, 렌더링의
+            흐름을 실습하는 학습용 포트폴리오입니다.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#projects">프로젝트 보기</a>
+            <a class="button button--secondary" href="#contact">문의하기</a>
+          </div>
+          <ul class="hero__highlights" aria-label="핵심 역량">
+            <li>Semantic HTML</li>
+            <li>Responsive CSS</li>
+            <li>Vanilla JavaScript</li>
+            <li>GitHub API</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about section reveal" id="about">
+        <div class="container section-heading">
+          <p class="eyebrow">About</p>
+          <h2>기초를 이해하는 개발자</h2>
+        </div>
+        <div class="container about__grid">
+          <article class="about__profile card">
+            <img src="images/profile.svg" alt="포트폴리오 프로필 일러스트" />
+          </article>
+          <article class="about__content card">
+            <h3>소개</h3>
+            <p>
+              저는 프레임워크를 사용하기 전에 웹이 어떻게 동작하는지 직접 구현하며 이해하는
+              것을 중요하게 생각합니다. 이 프로젝트에서는 DOM 선택, 이벤트 연결, 상태 관리,
+              비동기 데이터 처리까지 프론트엔드 핵심 흐름을 직접 코드로 구현했습니다.
+            </p>
+            <p>
+              학습 중심 프로젝트이기 때문에 UI 완성도뿐 아니라 로딩/에러/빈 상태, 폼 검증,
+              테마 유지처럼 실제 서비스에서 자주 마주치는 상황도 함께 다뤘습니다.
+            </p>
+            <ul class="about__list">
+              <li>사용자 이벤트 → 상태 변경 → DOM 업데이트 흐름 이해</li>
+              <li>모바일 퍼스트 반응형 레이아웃 설계</li>
+              <li>외부 API 연동과 비동기 상태 표현</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="skills section reveal" id="skills">
+        <div class="container section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2>핵심 기술 스택</h2>
+        </div>
+        <div class="container skills__grid">
+          <article class="card skill-card">
+            <h3>HTML</h3>
+            <p>시맨틱 구조, 접근성, 올바른 문서 계층 설계</p>
+          </article>
+          <article class="card skill-card">
+            <h3>CSS</h3>
+            <p>CSS 변수, Flexbox, Grid, 반응형 UI, 다크 모드</p>
+          </article>
+          <article class="card skill-card">
+            <h3>JavaScript</h3>
+            <p>이벤트 처리, DOM 조작, 상태 렌더링, localStorage</p>
+          </article>
+          <article class="card skill-card">
+            <h3>API</h3>
+            <p>fetch, async/await, try/catch, 상태 기반 UI 처리</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="projects section reveal" id="projects">
+        <div class="container section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Projects</p>
+            <h2>GitHub 프로젝트</h2>
+          </div>
+          <p class="section-note">GitHub API에서 프로젝트를 불러와 동적으로 렌더링합니다.</p>
+        </div>
+
+        <div class="container">
+          <div class="project-filters" id="project-filters" aria-label="프로젝트 언어 필터"></div>
+          <div id="projects-status" class="projects-status card hidden" aria-live="polite"></div>
+          <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="contact section reveal" id="contact">
+        <div class="container section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>함께 이야기해요</h2>
+        </div>
+        <div class="container contact__grid">
+          <article class="card contact__info">
+            <h3>연락 정보</h3>
+            <p>GitHub와 이메일을 통해 연락할 수 있습니다. 현재 LinkedIn 링크는 제공하지 않습니다.</p>
+            <ul class="contact__links">
+              <li><a href="https://github.com/giyeop-cody" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a href="mailto:cody.giyeop@gmail.com">cody.giyeop@gmail.com</a></li>
+            </ul>
+          </article>
+
+          <article class="card contact__form-wrapper">
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name">이름</label>
+                <input id="name" name="name" type="text" placeholder="이름을 입력하세요" required />
+                <p class="error-message" id="name-error"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="email">이메일</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                />
+                <p class="error-message" id="email-error"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="message">메시지</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="메시지를 입력하세요"
+                  required
+                ></textarea>
+                <p class="error-message" id="message-error"></p>
+              </div>
+
+              <button class="button button--primary button--full" type="submit">보내기</button>
+              <p id="form-success" class="form-success" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <div class="container footer__content">
+        <p>© 2026 Kim Giyeop. All rights reserved.</p>
+        <ul class="footer__links">
+          <li><a href="https://github.com/giyeop-cody" target="_blank" rel="noreferrer">GitHub</a></li>
+          <li><a href="mailto:cody.giyeop@gmail.com">Email</a></li>
+          <li><a href="#hero">Back to top</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" type="button" aria-label="맨 위로 이동">↑</button>
+  </body>
+</html>
