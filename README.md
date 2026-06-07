@@ -155,7 +155,7 @@ node validate-portfolio.mjs
 
 ## 10. 저장소 및 배포 정보
 
-- GitHub 저장소 URL: `https://github.com/giyeop-cody/B4-1`
+- GitHub 저장소 URL: `https://github.com/giyeop-cody/giyeop-cody.github.io`
 - GitHub Pages 배포 URL: `https://giyeop-cody.github.io`
 
 > 배포 후 위 두 항목을 실제 값으로 교체하세요.
