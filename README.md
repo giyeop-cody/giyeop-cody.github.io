@@ -158,13 +158,9 @@ node validate-portfolio.mjs
 - GitHub 저장소 URL: `https://github.com/giyeop-cody/giyeop-cody.github.io`
 - GitHub Pages 배포 URL: `https://giyeop-cody.github.io`
 
-> 배포 후 위 두 항목을 실제 값으로 교체하세요.
-
 ---
 
 ## 11. 스크린샷
-
-> 아래는 최종 제출용 형식입니다. 실제 캡처 파일을 준비한 뒤 경로를 맞춰 넣으면 됩니다.
 
 ### 데스크톱
 ![데스크톱 화면](screenshots/desktop.png)
@@ -177,47 +173,3 @@ node validate-portfolio.mjs
 
 > 현재 작업 환경에는 브라우저 캡처 기능이 없어 실제 스크린샷 파일은 아직 포함되지 않았습니다.  
 > 배포 후 `screenshots/desktop.png`, `screenshots/mobile.png`, `screenshots/dark-mode.png` 파일을 추가하세요.
-
----
-
-## 12. 실제 적용 값
-
-현재 문서와 프로젝트에는 아래 값이 반영되어 있습니다.
-
-- 이름: `Kim Giyeop`
-- GitHub 사용자명: `giyeop-cody`
-- GitHub 링크: `https://github.com/giyeop-cody`
-- LinkedIn 링크: 사용 안 함
-- 이메일: `cody.giyeop@gmail.com`
-- GitHub 저장소 URL: `https://github.com/giyeop-cody/giyeop-cody.github.io`
-- GitHub Pages 배포 URL: `https://giyeop-cody.github.io`
-
----
-
-## 13. 배포 절차 문서
-
-배포 전/후 작업은 아래 문서를 참고하세요.
-
-- 배포 전 점검표: `portfolio-deployment-checklist.md`
-- GitHub 업로드 / GitHub Pages 배포 절차: `github-pages-deployment-guide.md`
-- 필수 증거 문서: `portfolio-evidence-checklist.md`
-
----
-
-## 14. 최종 제출 체크
-
-최종 제출 시 아래 항목을 포함하세요.
-
-- GitHub 저장소 URL
-- GitHub Pages 배포 URL
-- 데스크톱 스크린샷
-- 모바일 스크린샷
-- 다크 모드 스크린샷
-
----
-
-## 15. 비고
-
-- 외부 UI 라이브러리는 사용하지 않았습니다.
-- 아이콘 라이브러리 없이도 미션 요구사항을 충족하도록 구현했습니다.
-- 실제 제출 전에는 자신의 정보와 링크로 교체하는 것이 좋습니다.
