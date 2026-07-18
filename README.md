@@ -106,7 +106,7 @@
 ├─ js/
 │  └─ main.js
 ├─ images/
-│  └─ profile.svg
+│  └─ profile.jpg
 ├─ README.md
 ├─ validate-portfolio.mjs
 ├─ portfolio-mission.md
