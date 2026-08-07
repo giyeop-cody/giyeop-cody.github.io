@@ -395,18 +395,63 @@ const bindEvents = () => {
     });
   });
 
-  elements.contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const { isValid } = validateForm();
+  // 기존 동기(일반) 함수에서 비동기(async) 함수로 변경
+  elements.contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault(); // 기본 새로고침 방지
+    const { isValid } = validateForm(); // 기존에 잘 만들어두신 유효성 검사 활용!
 
+    // 유효성 검사 실패 시
     if (!isValid) {
       elements.formSuccess.textContent = '입력값을 확인해주세요.';
+      elements.formSuccess.style.color = '#ef4444'; // 에러 색상(빨강)
       return;
     }
 
-    elements.contactForm.reset();
-    resetFormErrors();
-    elements.formSuccess.textContent = '메시지가 성공적으로 준비되었습니다. 감사합니다!';
+    // 1. 발송 중(로딩) 상태 표시
+    elements.formSuccess.textContent = '메시지를 전송하고 있습니다. 잠시만 기다려주세요...';
+    elements.formSuccess.style.color = 'inherit';
+
+    // 2. 폼에 입력된 데이터들 수집
+    const formData = new FormData(elements.contactForm);
+
+    try {
+      // 3. Formspree API로 데이터 전송
+      const response = await fetch('https://formspree.io/f/mjybkjoy', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      // 4. 전송 성공 여부에 따른 UI 상태 변경
+      if (response.ok) {
+        // 전송 성공!
+        elements.contactForm.reset();
+        resetFormErrors();
+        elements.formSuccess.textContent = '메시지가 성공적으로 전송되었습니다! 곧 답변 드리겠습니다.';
+        elements.formSuccess.style.color = '#10b981'; // 성공 색상(초록)
+
+        // 5초 뒤에 성공 메시지 자연스럽게 지워주기 (선택사항)
+        setTimeout(() => {
+          elements.formSuccess.textContent = '';
+        }, 5000);
+
+      } else {
+        // 서버에서 거절했을 때
+        const data = await response.json();
+        if (Object.hasOwn(data, 'errors')) {
+          elements.formSuccess.textContent = data.errors.map(error => error.message).join(', ');
+        } else {
+          elements.formSuccess.textContent = '전송에 실패했습니다. 나중에 다시 시도해 주세요.';
+        }
+        elements.formSuccess.style.color = '#ef4444';
+      }
+    } catch (error) {
+      // 인터넷 연결 끊김 등 네트워크 에러
+      elements.formSuccess.textContent = '네트워크 오류가 발생했습니다. 인터넷 연결을 확인해 주세요.';
+      elements.formSuccess.style.color = '#ef4444';
+    }
   });
 
   elements.filters.addEventListener('click', handleFilterClick);
