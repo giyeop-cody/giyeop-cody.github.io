@@ -3,8 +3,6 @@
 순수 **HTML / CSS / JavaScript**만으로 구현한 반응형 포트폴리오 웹사이트입니다.  
 이 프로젝트는 `portfolio-mission.md`를 기준으로 제작되었으며, **사용자 이벤트 → 상태 변경 → DOM 업데이트** 흐름을 직접 구현하는 것을 목표로 합니다.
 
-> 현재 이 README는 **최종 제출용 형태로 정리**되어 있으며, 아래 placeholder 값만 실제 정보로 교체하면 바로 제출 문서로 사용할 수 있습니다.
-
 ---
 
 ## 1. 프로젝트 개요
@@ -170,6 +168,3 @@ node validate-portfolio.mjs
 
 ### 다크 모드
 ![다크 모드 화면](screenshots/dark-mode.png)
-
-> 현재 작업 환경에는 브라우저 캡처 기능이 없어 실제 스크린샷 파일은 아직 포함되지 않았습니다.  
-> 배포 후 `screenshots/desktop.png`, `screenshots/mobile.png`, `screenshots/dark-mode.png` 파일을 추가하세요.
