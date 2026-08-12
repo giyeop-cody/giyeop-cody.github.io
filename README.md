@@ -11,6 +11,27 @@
 | **필수 여부** | ✅ 필수 |
 | **과제 번호** | 185010 |
 
+
+## 🎓 학습 목표
+
+이 과제를 완료한 뒤, 다음을 설명할 수 있어야 한다:
+
+1. UI 고퀄리티보다 '이벤트 → 상태 → 렌더링' 흐름 이해가 우선
+2. React 학습 전 필수 개념(DOM 조작, 이벤트, 비동기)을 체득한다
+3. addEventListener로 이벤트를 처리할 수 있다
+4. const/let을 사용하고 var를 피할 수 있다
+5. 비동기 데이터 fetching(fetch API)을 구현할 수 있다
+
+## ⚠️ 제약 사항
+
+- React, Vue, jQuery, Bootstrap, Tailwind CSS 등 외부 라이브러리 사용 금지
+- 순수 HTML, CSS, JavaScript만 사용
+- 아이콘(Font Awesome), 웹 폰트(Google Fonts)는 허용
+- var 대신 const, let 사용
+- HTML에 onclick 대신 addEventListener 사용
+- 인라인 스타일(style="...") 사용 금지
+- GitHub API 인증 없이 호출 시 시간당 60회 제한, 403 시 에러 UI 표시
+
 순수 **HTML / CSS / JavaScript**만으로 구현한 반응형 포트폴리오 웹사이트입니다.
 이 프로젝트는 `portfolio-mission.md`를 기준으로 제작되었으며, **사용자 이벤트 → 상태 변경 → DOM 업데이트** 흐름을 직접 구현하는 것을 목표로 합니다.
 
